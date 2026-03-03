@@ -32,15 +32,3 @@ jobs:
         run: |
           cd UI
           npm run cypress:run:dev:checkout
-
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Instalar dependências
-        run: |
-          cd UI
-          npm install
-      - name: Executar testes de checkout alternativo
-        run: |
-          cd UI
-          npm run cypress:run:dev:checkout_alternative
