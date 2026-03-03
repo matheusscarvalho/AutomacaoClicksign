@@ -1,0 +1,47 @@
+name: E2E Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar dependências
+        run: |
+          cd UI
+          npm install
+      - name: Executar testes de login
+        run: |
+          cd UI
+          npx cypress run --e2e --spec "cypress/e2e/features/1-login.feature" --tag login
+
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar dependências
+        run: |
+          cd UI
+          npm install
+      - name: Executar testes de checkout
+        run: |
+          cd UI
+          npx cypress run --e2e --spec "cypress/e2e/features/2-checkout.feature" --tag checkout
+
+  checkout_alternative:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar dependências
+        run: |
+          cd UI
+          npm install
+      - name: Executar testes de checkout alternativo
+        run: |
+          cd UI
+          npx cypress run --e2e --spec "cypress/e2e/features/3-checkout-alternative.feature" --tag checkout_alternative
