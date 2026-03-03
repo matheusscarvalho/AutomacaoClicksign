@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Relatórios do Newman
+newman/
+
+# Logs
+npm-debug.log*
+
+# Ambiente
+.env
+
+# Outros arquivos temporários
+*.tmp
+*.log

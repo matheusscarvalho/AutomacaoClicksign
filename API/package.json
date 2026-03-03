@@ -1,0 +1,14 @@
+{
+  "name": "sererest-newman-tests",
+  "version": "1.0.0",
+  "description": "Projeto Node.js para executar testes da ServeRest com Newman.",
+  "main": "index.js",
+  "scripts": {
+    "test:dev": "newman run ./testes/1-Usuarios.collection.json -e ./ambientes/dev_environment.json --reporters cli,json --reporter-json-export ./newman/report.json"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.2.2"
+  }
+}

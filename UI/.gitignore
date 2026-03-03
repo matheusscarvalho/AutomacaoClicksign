@@ -1,0 +1,23 @@
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# Cache
+.cache
+
+# Cucumber output
+.cucumber-report
+.cucumber-json

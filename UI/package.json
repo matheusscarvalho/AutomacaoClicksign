@@ -1,0 +1,24 @@
+{
+  "name": "automacao-avivatec-cypress",
+  "version": "1.0.0",
+  "description": "Estrutura de testes frontend com Cypress e PageObjects",
+  "scripts": {
+    "cypress:open:dev": "cypress open --config-file config/dev.config.js",
+    "cypress:open:qa": "cypress open --config-file config/qa.config.js",
+    "cypress:run:dev": "cypress run --config-file config/dev.config.js",
+    "cypress:run:qa": "cypress run --config-file config/qa.config.js",
+    "cypress:run:dev:login": "cypress run --config-file config/dev.config.js --env TAGS='@login'",
+    "cypress:run:dev:checkout": "cypress run --config-file config/dev.config.js --env TAGS='@checkout'",
+    "cypress:run:qa:login": "cypress run --config-file config/qa.config.js --env TAGS='@login'",
+    "cypress:run:qa:checkout": "cypress run --config-file config/qa.config.js --env TAGS='@checkout'",
+    "cypress:open:dev:login": "cypress open --config-file config/dev.config.js --env TAGS='@login'",
+    "cypress:open:dev:checkout": "cypress open --config-file config/dev.config.js --env TAGS='@checkout'",
+    "cypress:open:qa:login": "cypress open --config-file config/qa.config.js --env TAGS='@login'",
+    "cypress:open:qa:checkout": "cypress open --config-file config/qa.config.js --env TAGS='@checkout'"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "15.10.0"
+  }
+}

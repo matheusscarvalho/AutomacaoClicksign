@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# K6 outputs
+*.json
+*.csv
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Configuração de ambiente
+config/env.js
