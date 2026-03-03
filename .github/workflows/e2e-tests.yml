@@ -18,7 +18,7 @@ jobs:
       - name: Executar testes de login
         run: |
           cd UI
-          npx cypress run --e2e --spec "cypress/e2e/features/1-login.feature" --tag login
+          npm run cypress:run:qa:login
 
   checkout:
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
       - name: Executar testes de checkout
         run: |
           cd UI
-          npx cypress run --e2e --spec "cypress/e2e/features/2-checkout.feature" --tag checkout
+          npm run cypress:run:dev:checkout
 
   checkout_alternative:
     runs-on: ubuntu-latest
@@ -44,4 +44,4 @@ jobs:
       - name: Executar testes de checkout alternativo
         run: |
           cd UI
-          npx cypress run --e2e --spec "cypress/e2e/features/3-checkout-alternative.feature" --tag checkout_alternative
+          npm run cypress:run:dev:checkout_alternative
